@@ -1,7 +1,7 @@
 name = "WorldMapData"
-uuid = "81b676cb-fb27-40fe-b459-42b007519069"
+uuid = "32d4f7b0-743f-46d6-98a0-ed8cdb29792a"
 authors = ["Duncan Eddy <duncan.eddy@gmail.com>"]
-version = "0.1.0"
+version = "0.0.0"
 
 [deps]
 Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
