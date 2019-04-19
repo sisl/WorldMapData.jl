@@ -43,18 +43,18 @@ Arguments:
 """
 function load_data(path)
     
-    zip_path = path * ".zip"
+    # zip_path = path * ".zip"
     shp_path = path * ".shp"
 
-    if !isfile(shp_path)
-        unzip(zip_path)
-    end
+    # if !isfile(shp_path)
+    #     unzip(zip_path)
+    # end
 
     handle = open(shp_path, "r") do io
         read(io, Shapefile.Handle)
     end
 
-    return handle.shapes
+    return handle
 end
 
 export load_GSHHS_data
