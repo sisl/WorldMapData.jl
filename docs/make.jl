@@ -1,8 +1,6 @@
 using Documenter
 using WorldMapData
 
-include("src/makeplots.jl")
-
 # Generate documents
 makedocs(
     modules   = [WorldMapData],
