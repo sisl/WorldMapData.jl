@@ -153,7 +153,7 @@ function load_WDBII_border_data(;resolution::Symbol=:CRUDE, level::Integer=1)
                     "..", 
                     "data", 
                     "gshhg-shp-2.3.7", 
-                    "WDBII_SHP", 
+                    "WDBII_shp", 
                     RESOLUTION_LOOKUP[resolution],
                     "WDBII_border_$(RESOLUTION_LOOKUP[resolution])_L$level")
 
@@ -206,7 +206,7 @@ function load_WDBII_river_data(;resolution::Symbol=:CRUDE, level::Integer=1)
                     "..", 
                     "data", 
                     "gshhg-shp-2.3.7", 
-                    "WDBII_SHP", 
+                    "WDBII_shp", 
                     RESOLUTION_LOOKUP[resolution],
                     "WDBII_river_$(RESOLUTION_LOOKUP[resolution])_L$(@sprintf("%02d", level))")
 
