@@ -14,14 +14,7 @@ notifications:
 matrix:
   allow_failures:
     - julia: nightly
-
-before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq x11-apps libxt6 libxrender1 libxext6 libgl1-mesa-glx qtbase5-dev qtdeclarative5-dev; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export GKSwstype=svg; fi
-
+    
 script:
   - julia --project --check-bounds=yes -e 'import Pkg; Pkg.build(); Pkg.test("WorldMapData"; coverage=true)'
 
