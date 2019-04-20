@@ -43,13 +43,13 @@ Arguments:
 """
 function load_data(path)
     
-    # zip_path = path * ".zip"
     shp_path = path * ".shp"
 
     # if !isfile(shp_path)
     #     unzip(zip_path)
     # end
 
+    # @debug "Loading datafile: $shp_path"
     handle = open(shp_path, "r") do io
         read(io, Shapefile.Handle)
     end
@@ -105,8 +105,7 @@ function load_GSHHS_data(;resolution::Symbol=:CRUDE, level::Integer=1)
 
     path = joinpath(@__DIR__, 
                     "..", 
-                    "data", 
-                    "gshhg-shp-2.3.7", 
+                    "data",
                     "GSHHS_shp", 
                     RESOLUTION_LOOKUP[resolution],
                     "GSHHS_$(RESOLUTION_LOOKUP[resolution])_L$level")
@@ -151,8 +150,7 @@ function load_WDBII_border_data(;resolution::Symbol=:CRUDE, level::Integer=1)
 
     path = joinpath(@__DIR__, 
                     "..", 
-                    "data", 
-                    "gshhg-shp-2.3.7", 
+                    "data",
                     "WDBII_shp", 
                     RESOLUTION_LOOKUP[resolution],
                     "WDBII_border_$(RESOLUTION_LOOKUP[resolution])_L$level")
@@ -204,8 +202,7 @@ function load_WDBII_river_data(;resolution::Symbol=:CRUDE, level::Integer=1)
 
     path = joinpath(@__DIR__, 
                     "..", 
-                    "data", 
-                    "gshhg-shp-2.3.7", 
+                    "data",
                     "WDBII_shp", 
                     RESOLUTION_LOOKUP[resolution],
                     "WDBII_river_$(RESOLUTION_LOOKUP[resolution])_L$(@sprintf("%02d", level))")
