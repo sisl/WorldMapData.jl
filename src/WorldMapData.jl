@@ -99,7 +99,7 @@ function load_GSHHS_data(;resolution::Symbol=:CRUDE, level::Integer=1)
     end
 
     if (resolution == :CRUDE) && (level == 4)
-        throw(ArgumentError("Invalid combination resolution $resolution - `$`level."))
+        throw(ArgumentError("Invalid combination resolution $resolution - $level."))
     end
 
     path = joinpath(@__DIR__, 
