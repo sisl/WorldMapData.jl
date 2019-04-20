@@ -6,7 +6,7 @@ political boundaries.
 
 You can find and download the original dataset from here https://www.soest.hawaii.edu/pwessel/gshhg/
 
-The package provides the following function to interact with the dataset.
+The package provides the following function to interact with the dataset:
 
 ```@docs
 valid_resolution

@@ -62,27 +62,26 @@ export load_GSHHS_data
 Load GSHHS Shapefile data and return all polygons in the data set.
 
 All data sets come in 5 different resolutions:
-	f : Full resolution.  These contain the maximum resolution
+	- f : Full resolution.  These contain the maximum resolution
 	    of this data and has not been decimated.
-	h : High resolution.  The Douglas-Peucker line reduction was
+	- h : High resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to full.
-	i : Intermediate resolution.  The Douglas-Peucker line reduction was
+	- i : Intermediate resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to high.
-	l : Low resolution.  The Douglas-Peucker line reduction was
+	- l : Low resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to intermediate.
-	c : Crude resolution.  The Douglas-Peucker line reduction was
+	- c : Crude resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to low.
 
 For each resolution there are several levels; these depends on the data type.
 
 The shoreline data are distributed in 6 levels:
-
-Level 1: Continental land masses and ocean islands, except Antarctica.
-Level 2: Lakes
-Level 3: Islands in lakes
-Level 4: Ponds in islands within lakes
-Level 5: Antarctica based on ice front boundary.
-Level 6: Antarctica based on grounding line boundary.
+    - Level 1: Continental land masses and ocean islands, except Antarctica.
+    - Level 2: Lakes
+    - Level 3: Islands in lakes
+    - Level 4: Ponds in islands within lakes
+    - Level 5: Antarctica based on ice front boundary.
+    - Level 6: Antarctica based on grounding line boundary.
 
 Note that because GIS software confusingly seem to assume a Cartesian geometry,
 any polygon straddling the Dateline is broken into an east and west component.
@@ -119,24 +118,23 @@ export load_WDBII_border_data
 Load WDBI Shapefile data and return all polygons in the data set.
 
 All data sets come in 5 different resolutions:
-	f : Full resolution.  These contain the maximum resolution
+    - f : Full resolution.  These contain the maximum resolution
 	    of this data and has not been decimated.
-	h : High resolution.  The Douglas-Peucker line reduction was
+    - h : High resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to full.
-	i : Intermediate resolution.  The Douglas-Peucker line reduction was
+    - i : Intermediate resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to high.
-	l : Low resolution.  The Douglas-Peucker line reduction was
+    - l : Low resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to intermediate.
-	c : Crude resolution.  The Douglas-Peucker line reduction was
+    - c : Crude resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to low.
 
 For each resolution there are several levels; these depends on the data type.
 
 The political boundary data come in 3 levels:
-
-Level 1: National boundaries.
-Level 2: Internal (state) boundaries for the 8 largest countries only.
-Level 3: Maritime boundaries.
+    - Level 1: National boundaries.
+    - Level 2: Internal (state) boundaries for the 8 largest countries only.
+    - Level 3: Maritime boundaries.
 """
 function load_WDBII_border_data(;resolution::Symbol=:CRUDE, level::Integer=1)
     # Check for valid inputs
@@ -163,32 +161,31 @@ export load_WDBII_river_data
 Load WDBI Shapefile data and return all polygons in the data set.
 
 All data sets come in 5 different resolutions:
-	f : Full resolution.  These contain the maximum resolution
+    - f : Full resolution.  These contain the maximum resolution
 	    of this data and has not been decimated.
-	h : High resolution.  The Douglas-Peucker line reduction was
+    - h : High resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to full.
-	i : Intermediate resolution.  The Douglas-Peucker line reduction was
+    - i : Intermediate resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to high.
-	l : Low resolution.  The Douglas-Peucker line reduction was
+    - l : Low resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to intermediate.
-	c : Crude resolution.  The Douglas-Peucker line reduction was
+    - c : Crude resolution.  The Douglas-Peucker line reduction was
 	    used to reduce data size by ~80% relative to low.
 
 For each resolution there are several levels; these depends on the data type.
 
 The river database come with 11 levels:
-
-Level  1: Double-lined rivers (river-lakes).
-Level  2: Permanent major rivers.
-Level  3: Additional major rivers.
-Level  4: Additional rivers.
-Level  5: Minor rivers.
-Level  6: Intermittent rivers - major.
-Level  7: Intermittent rivers - additional.
-Level  8: Intermittent rivers - minor.
-Level  9: Major canals.
-Level 10: Minor canals.
-Level 11: Irrigation canals.
+    - Level  1: Double-lined rivers (river-lakes).
+    - Level  2: Permanent major rivers.
+    - Level  3: Additional major rivers.
+    - Level  4: Additional rivers.
+    - Level  5: Minor rivers.
+    - Level  6: Intermittent rivers - major.
+    - Level  7: Intermittent rivers - additional.
+    - Level  8: Intermittent rivers - minor.
+    - Level  9: Major canals.
+    - Level 10: Minor canals.
+    - Level 11: Irrigation canals.
 """
 function load_WDBII_river_data(;resolution::Symbol=:CRUDE, level::Integer=1)
     # Check for valid inputs
